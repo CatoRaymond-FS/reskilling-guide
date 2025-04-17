@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Colors and Fonts */
+:root {
+  --bg: #fdfdff;
+  --card-bg: #ffffff;
+  --primary: #a3c9f9;
+  --accent: #dbeeff;
+  --text: #333;
+  --heading: #2b4c7e;
+  --shadow: rgba(173, 216, 230, 0.4);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--primary), #d2e5fa);
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  margin: 0 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+/* Button Styling */
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #84c5f4;
+}
+/* Section Wrapper */
+.guide-section {
+  margin: 0 auto;
+  max-width: 850px;
+  padding: 0 1rem;
+}
+
+/* Card Styling */
+.guide-card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px var(--shadow);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+/* Headings */
+.guide-card h2 {
+  font-size: 1.8rem;
+  color: var(--heading);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.guide-card h3 {
+  font-size: 1.3rem;
+  color: var(--heading);
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.guide-card p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Cozy List Styling */
+.guide-card ul,
+.guide-card ol {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: var(--text);
+}
+
+.guide-card ul li,
+.guide-card ol li {
+  background: #f3faff;
+  border-left: 4px solid #84c5f4;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+.guide-card ul li:hover,
+.guide-card ol li:hover {
+  background: #e6f3ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .guide-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Cozy Glossary Styling */
+.guide-card dl {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.guide-card dt {
+  font-weight: 600;
+  color: var(--heading);
+  background-color: #f0f7ff;
+  border-left: 4px solid var(--primary);
+  padding: 0.6rem 1rem;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.guide-card dd {
+  margin: 0;
+  padding: 0.6rem 1rem 1rem 1rem;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+  font-size: 0.95rem;
+  color: var(--text);
+  border-bottom: 1px solid #e6f0f9;
+}
+
+.guide-card dt + dd {
+  margin-bottom: 1rem;
+}
